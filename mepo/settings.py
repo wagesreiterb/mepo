@@ -25,7 +25,7 @@ SECRET_KEY = '(fst)5_g+rxm9hjrdm&d=gxn&3w@pit=gaqzi+m)qp(xl*!#c4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']   # Todo: needs to be changed for production
 
 #LOGIN_REDIRECT_URL = '/portal/'
 

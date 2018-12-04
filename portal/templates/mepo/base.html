@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        {% include "mepo/base_css.html" %}
+
+        <title>SMSC/MMSC | Planning Department</title>
+    </head>
+
+    <body class="fixed-navbar fixed-sidebar">
+
+        {% include "mepo/base_header.html" %}
+
+        {% include "mepo/base_aside.html" %}
+
+         <div id="wrapper">
+            {% block body %}
+            {% endblock body %}
+            {% include "mepo/base_footer.html" %}
+         </div>
+
+         {% include "mepo/base_javascript.html" %}
+
+    </body>
+
+</html>

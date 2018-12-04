@@ -1,0 +1,166 @@
+{% extends 'mepo/base.html' %}
+
+{% block body %}
+ <!-- header panel -->
+<div class="normalheader transition animated fadeIn">
+    <div class="hpanel">
+        <div class="panel-body">
+            <a class="small-header-action" href="">
+                <div class="clip-header"><i class="fa fa-arrow-up"></i></div>
+            </a>
+            <h2 class="font-light m-b-xs">Blocking</h2>
+        </div>
+    </div>
+</div>
+<!-- header panel -->
+
+<div class="content animate-panel" data-child="hpanel">
+    <div class="hpanel hgreen col-md-10 col-md-offset-1">
+        <div class="panel-heading hbuilt"></div>
+        <div class="panel-body">
+
+            <div class="col-md-6 col-md-offset-3">
+                <div class="forum-box-a1ta">
+                    <div class="forum-box-a1ta panel-heading">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="h5">
+                                </div>
+                            </div>
+                            <section id="modalCreateNewServiceShortDescription"></section><!-- modal Dialog -->
+                        </div>
+                    </div>
+                   <div class="row">
+                        <div class="col-md-12">
+                            <div class="hpanel hgreen">
+                                <div class="panel-body hred">
+
+                                    <form id="form_blocking" method="post">
+                                        {% csrf_token %}
+
+                                        <div class="form-group">
+                                            <div class="row vertical-align-top-a1ta">
+                                                <div class="col-md-2 margin-top-a1ta">
+                                                    <label class="col-md-12 control-label text-right">MSISDN</label>
+                                                </div>
+                                                <div class="col-md-10">
+                                                     <input type="text" class="form-control input-md" id="msisdn" value="{{ msisdn }}" name="msisdn" >
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row vertical-align-top-a1ta">
+                                                <div class="col-md-2 margin-top-a1ta">
+                                                    <label class="col-md-12 control-label text-right">Rule</label>
+                                                </div>
+                                                <div class="col-md-10">
+                                                     <input type="text" placeholder="{{ blocking_rule }}" readonly="readonly" class="form-control input-md">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="forum-box-a1ta">
+                                            <div class="forum-box-a1ta panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="radio radio-success radio-inline">
+                                                            <input type="radio" id="connection_url_ref" value="ref" name="connection_url"
+                                                                   {% if connection_url == "ref" %}
+                                                                        checked="">
+                                                                   {% else %}
+                                                                        >
+                                                                   {% endif %}
+                                                            <label for="connection_url_ref">Ref</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="radio radio-success radio-inline">
+                                                            <input type="radio" id="connection_url_prod" value="prod" name="connection_url"
+                                                                    {% if connection_url == "prod" %}
+                                                                        checked="">
+                                                                    {% else %}
+                                                                        >
+                                                                    {% endif %}
+                                                            <label for="connection_url_prod">Prod</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="forum-box-a1ta">
+                                            <div class="forum-box-a1ta panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="radio radio-success radio-inline">
+                                                            <input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="">
+                                                            <label for="inlineRadio1">get</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="radio radio-success radio-inline">
+                                                            <input type="radio" id="inlineRadio2" value="option2" name="radioInline2">
+                                                            <label for="inlineRadio2">set</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="radio radio-success radio-inline">
+                                                            <input type="radio" id="inlineRadio3" value="option2" name="radioInline3">
+                                                            <label for="inlineRadio2">del</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <input type="submit" value="Submit" class="btn btn-success btn-block">
+                                        <button onclick="myFunction()">Try it</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+function myFunction() {
+    alert("Hello\nHow are you?");
+}
+</script>
+
+<script type="text/javascript">
+    $(document).on('submit', '#form_blocking',function(e){
+        console.log( $(this).val() );
+        e.preventDefault();
+        alert("Hello!");
+
+        $.ajax({
+            type: 'POST',
+            url:'/mepo/bled',
+            data:{
+                msisdn:$('#msisdn).val(),
+				csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
+            success:function(){
+                alert("Hello World!");
+            }
+		});
+    });
+
+</script>
+
+{% endblock body %}
+
+
+
+
+
+

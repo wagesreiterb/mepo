@@ -1,0 +1,60 @@
+{% extends 'mepo/base.html' %}
+
+{% load static %}
+
+{% block body %}
+ <!-- header panel -->
+<div class="normalheader transition animated fadeIn">
+    <div class="hpanel">
+        <div class="panel-body">
+            <a class="small-header-action" href="">
+                <div class="clip-header"><i class="fa fa-arrow-up"></i></div>
+            </a>
+            <h2 class="font-light m-b-xs">Home</h2>
+        </div>
+    </div>
+</div>
+<!-- header panel -->
+
+<div class="content animate-panel" data-child="hpanel">
+    <div class="hpanel hred col-md-10 col-md-offset-1">
+        <div class="panel-heading hbuilt"></div>
+        <div class="panel-body">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="forum-box-a1ta">
+                    <div class="forum-box-a1ta panel-heading">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="h5">
+                                    <b><center>DevOps in practice!</center></b>
+                                </div>
+                            </div>
+                            <section id="modalCreateNewServiceShortDescription"></section><!-- modal Dialog -->
+                        </div>
+                    </div>
+                   <div class="row">
+                        <div class="col-md-12">
+                            <div class="hpanel hgreen">
+                                <div class="panel-body hred">
+
+                                    <img src="{% static 'mepo/images/Messaging_Featured_Image.png' %}" class="img-responsive" alt="Messaging_Featured_Image"/>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock body %}
+
+
+
+
+
+

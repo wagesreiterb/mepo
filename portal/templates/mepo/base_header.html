@@ -1,0 +1,124 @@
+{% block base_header %}
+
+{% include "mepo/base_header_splashscreen.html" %}
+
+        <!-- Header -->
+        <div id="header">
+            <!-- color line at the top of the site -->
+            <div class="color-line"></div>
+
+            <!-- 1st column of the header-->
+            <div id="logo" class="light-version">
+                <span>
+                    Messaging Portal 2.0
+                </span>
+            </div>
+
+            <!-- 2nd column of the header -->
+            <nav role="navigation">
+                <div class="header-link hide-menu">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+
+            <!-- 3rd column of the header -->
+            <!-- search engine -->
+            <form role="search" class="navbar-form-custom" method="post" action="#">
+                <div class="form-group">
+                    <input type="text" placeholder="Search something..." class="form-control" name="search">
+                </div>
+            </form>
+
+            <!-- 4th column of the header -->
+            <div class="navbar-right">
+                <ul class="nav navbar-nav no-borders">
+                    <!-- Menü Symbole rechts oben -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            <i class="pe-7s-speaker"></i>
+                        </a>
+                        <ul class="dropdown-menu hdropdown notification animated flipInX">
+                            <li>
+                                <a>
+                                    <span class="label label-success">NEW</span> It is a long established.
+                                </a>
+                            </li>
+                            <li class="summary">
+                                <a href="#">See all notifications</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            <i class="pe-7s-keypad"></i>
+                        </a>
+                        <div class="dropdown-menu hdropdown bigmenu animated flipInX">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="projects.html">
+                                            <i class="pe pe-7s-portfolio text-info"></i>
+                                            <h5>Projects</h5>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="mailbox.html">
+                                            <i class="pe pe-7s-mail text-warning"></i>
+                                            <h5>Email</h5>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                            <i class="pe-7s-mail"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu hdropdown animated flipInX">
+                            <div class="title">
+                                You have 4 new messages
+                            </div>
+                            <li>
+                                <a>
+                                    It is a long established.
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    There are many variations.
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    Lorem Ipsum is simply dummy.
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    Contrary to popular belief.
+                                </a>
+                            </li>
+                            <li class="summary"><a href="#">See All Messages</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="sidebar" class="right-sidebar-toggle">
+                            <i class="pe-7s-upload pe-7s-news-paper"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="{% url 'mepo:logout'%}">
+                            <i class="pe-7s-upload pe-rotate-90"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+{% endblock base_header %}

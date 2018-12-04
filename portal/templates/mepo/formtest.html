@@ -1,0 +1,108 @@
+{% extends 'mepo/base.html' %}
+
+{% block body %}
+ <!-- header panel -->
+<div class="normalheader transition animated fadeIn">
+    <div class="hpanel">
+        <div class="panel-body">
+            <a class="small-header-action" href="">
+                <div class="clip-header"><i class="fa fa-arrow-up"></i></div>
+            </a>
+            <h2 class="font-light m-b-xs">Create New Service</h2>
+        </div>
+    </div>
+</div>
+<!-- header panel -->
+
+
+
+<div class="content">
+
+
+<!-- Dienstenummer(n) -->
+<div class="content animate-panel" data-child="hpanel">
+    <div class="hpanel hgreen">
+
+        <div class="panel-heading hbuilt">
+		    Dienstenummer(n)
+        </div>
+
+        <div class="panel-body">
+            <div class="col-md-10 col-md-offset-0">
+                <div class="forum-box-a1ta">
+
+                    <div class="row">
+
+                        <div id="rowNewMsisdn0" class="col-md-12" name="rowNewMsisdn">
+                            <div class="col-md-8 col-md-offset-0">
+                                 <strong>
+                                     <input id="msisdn0" class="classMsisdn form-control input-lg m-b" name="msisdn" data-toggle="tooltip" data-placement="bottom" type="text">
+                                 </strong>
+                            </div>
+                        </div>
+
+                        <div class="row margin-bottom-a1ta">
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <div class="col-md-8 col-md-offset-0">
+                                <small>Zusatzinfo: </small>
+                                <input type="text" class="form-control input-sm" placeholder="Achtung: Corporate Kunden müssen 9993351 wählen!">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Dienstenummer(n) -->
+
+
+<!-- TEST -->
+<div class="content animate-panel" data-child="hpanel">
+    <div class="hpanel hgreen col-md-10 col-md-offset-1">
+        <div class="panel-heading hbuilt"></div>
+        <div class="panel-body">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="forum-box-a1ta">
+                    <div class="forum-box-a1ta panel-heading">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="h5">
+                                </div>
+                            </div>
+                            <section id="modalCreateNewServiceShortDescription"></section><!-- modal Dialog -->
+                        </div>
+                    </div>
+                   <div class="row">
+                        <div class="col-md-12">
+                            <div class="hpanel hgreen">
+                                <div class="panel-body hred">
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        {{ form.as_p }}
+                                        <button type="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- TEST -->
+
+</div>
+
+{% endblock body %}
+
+
+
+
+
+

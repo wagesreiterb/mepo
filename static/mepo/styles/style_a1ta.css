@@ -1,0 +1,138 @@
+/*a1ta*/
+
+.project-list-a1ta table tr td {
+  border-top: none;
+  border-bottom: 1px solid #e7eaec;
+  padding: 10px 10px;
+  vertical-align: top;
+}
+
+.margin-top-a1ta {
+  margin-top: 10px;
+}
+.margin-top-a1ta-8px {
+  margin-top: 8px;
+}
+.margin-top-a1ta-9px {
+  margin-top: 9px;
+}
+.margin-top-a1ta-10px {
+  margin-top: 10px;
+}
+.margin-bottom-a1ta {
+  margin-bottom: 30px;
+}
+.margin-bottom-a1ta-10px {
+  margin-bottom: 10px;
+}
+
+
+
+
+/*textarea{ 
+  height:35px; 
+  min-height:35px;  
+}*/
+.noresize {
+  resize: none; 
+}
+
+.vresize {
+  resize: vertical; 
+}
+  
+.hresize {
+  resize: horizontal;  
+}  
+
+
+
+
+.vertical-align-a1ta {
+    display: flex;
+    align-items: center;
+}
+.vertical-align-top-a1ta {
+  display: flex;
+  align-items: top;
+}
+
+.forum-box-a1ta .panel-body {
+  border-bottom: none;
+}
+.forum-box-a1ta .panel-body:last-child {
+  border-bottom: 1px solid #e4e5e7;
+  border-top: 1px solid #e4e5e7;
+  margin-bottom: 22px;
+}
+.forum-box-a1ta .forum-heading h4 {
+  margin-bottom: 3px;
+  font-weight: 600;
+  margin-top: 5px;
+  display: inline;
+}
+.forum-box-a1ta .forum-heading .label {
+  margin-right: 5px;
+}
+.forum-box-a1ta .forum-heading .desc {
+  color: #909295;
+  font-size: 12px;
+}
+.forum-box-a1ta .panel-heading {
+  border: 1px solid #e4e5e7;
+  border-bottom: none;
+  font-size: 90%;
+  background: #f7f9fa;
+  padding: 10px 20px;
+}
+.forum-box-a1ta .forum-info {
+  text-align: right;
+  line-height: 20px;
+}
+.forum-box-a1ta .forum-info .number {
+  display: block;
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 5px;
+}
+.forum-box-a1ta .forum-info span {
+  font-size: 12px;
+}
+.forum-box-a1ta .panel-body .media-image {
+  text-align: center;
+  margin-right: 10px;
+  min-width: 100px;
+}
+.forum-box-a1ta .panel-body .media img {
+  margin-top: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.forum-box-a1ta .author-info {
+  font-size: 12px;
+}
+.forum-box-a1ta .forum-comments {
+  border: 1px solid #e4e5e7;
+  border-left: none;
+  border-right: none;
+  background: #f7f9fa;
+  margin-top: 20px;
+  padding: 10px 15px;
+}
+.forum-box-a1ta .forum-comments .media img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.forum-box-a1ta .forum-comments form {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .forum-box-a1ta .forum-info {
+    text-align: left;
+  }
+}

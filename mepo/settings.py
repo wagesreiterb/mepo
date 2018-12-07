@@ -26,9 +26,8 @@ SECRET_KEY = '(fst)5_g+rxm9hjrdm&d=gxn&3w@pit=gaqzi+m)qp(xl*!#c4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['mepo-nfv.openshift-poc....', '127.0.0.1']   # Todo: needs to be changed for production
-# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 # https://github.com/openshift-quickstart/django-example/blob/master/wsgi/myproject/myproject/settings.py
+# ALLOWED_HOSTS = ['mepo-nfv.openshift-poc....', '127.0.0.1']
 ALLOWED_HOSTS = [
     gethostname(),  # For internal OpenShift load balancer security purposes.
     os.environ.get('ALLOWED_HOSTS'),    # Dynamically map to the OpenShift gear name.

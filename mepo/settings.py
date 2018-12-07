@@ -83,10 +83,21 @@ WSGI_APPLICATION = 'mepo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('POSTGRESQL_DATABASE', ''),
+        'USER': os.environ.get('POSTGRESQL_USER', ''),
+        'PASSWORD': os.environ.get('POSTGRESQL_PASSWORD', ''),
+        'HOST': os.environ.get('POSTGRESQL_SERVICE_HOST', ''),
+        'PORT': os.environ.get('POSTGRESQL_SERVICE_PORT_POSTGRESQL', ''),
     }
 }
 

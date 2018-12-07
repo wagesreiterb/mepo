@@ -26,7 +26,15 @@ SECRET_KEY = '(fst)5_g+rxm9hjrdm&d=gxn&3w@pit=gaqzi+m)qp(xl*!#c4'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['mepo-nfv.openshift-poc.at.inside', '127.0.0.1']   # Todo: needs to be changed for production
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
+# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
+# https://github.com/openshift-quickstart/django-example/blob/master/wsgi/myproject/myproject/settings.py
+from socket import gethostname
+ALLOWED_HOSTS = [
+    gethostname(),  # For internal OpenShift load balancer security purposes.
+    os.environ.get('OPENSHIFT_APP_DNS'),    # Dynamically map to the OpenShift gear name.
+    #'example.com', # First DNS alias (set up in the app)
+    #'www.example.com', # Second DNS alias (set up in the app)
+]
 
 LOGIN_REDIRECT_URL = '/portal/'
 

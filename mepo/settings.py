@@ -26,7 +26,7 @@ SECRET_KEY = '(fst)5_g+rxm9hjrdm&d=gxn&3w@pit=gaqzi+m)qp(xl*!#c4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['mepo-nfv.openshift-poc.at.inside', '127.0.0.1']   # Todo: needs to be changed for production
+# ALLOWED_HOSTS = ['mepo-nfv.openshift-poc....', '127.0.0.1']   # Todo: needs to be changed for production
 # ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 # https://github.com/openshift-quickstart/django-example/blob/master/wsgi/myproject/myproject/settings.py
 ALLOWED_HOSTS = [
@@ -35,8 +35,6 @@ ALLOWED_HOSTS = [
     #'example.com', # First DNS alias (set up in the app)
     #'www.example.com', # Second DNS alias (set up in the app)
 ]
-
-print(ALLOWED_HOSTS)
 
 LOGIN_REDIRECT_URL = '/portal/'
 
@@ -124,7 +122,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
+STATIC_URL = os.environ.get('STATIC_URL')
 #STATIC_URL = 'http://mepo-static-nfv.openshift-poc.at.inside/static/'
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 #STATIC_ROOT = 'static'

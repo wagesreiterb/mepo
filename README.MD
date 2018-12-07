@@ -1,0 +1,3 @@
+
+ALLOWED_HOSTS = mepo-nfv.openshift-poc....
+STATIC_URL = http://mepo-static-nfv.openshift-poc..../static/'

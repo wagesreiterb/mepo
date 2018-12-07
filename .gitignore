@@ -4,5 +4,6 @@ __pycache__
 portal/static
 venv
 db.sqlite3
+/static
 .DS_Store
 /.idea

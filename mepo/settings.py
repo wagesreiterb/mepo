@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from socket import gethostname
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,7 +29,6 @@ DEBUG = True
 # ALLOWED_HOSTS = ['mepo-nfv.openshift-poc.at.inside', '127.0.0.1']   # Todo: needs to be changed for production
 # ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 # https://github.com/openshift-quickstart/django-example/blob/master/wsgi/myproject/myproject/settings.py
-from socket import gethostname
 ALLOWED_HOSTS = [
     gethostname(),  # For internal OpenShift load balancer security purposes.
     os.environ.get('OPENSHIFT_APP_DNS'),    # Dynamically map to the OpenShift gear name.

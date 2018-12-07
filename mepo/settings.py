@@ -36,6 +36,8 @@ ALLOWED_HOSTS = [
     #'www.example.com', # Second DNS alias (set up in the app)
 ]
 
+print(ALLOWED_HOSTS)
+
 LOGIN_REDIRECT_URL = '/portal/'
 
 # Application definition

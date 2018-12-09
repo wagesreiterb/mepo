@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
     #'www.example.com', # Second DNS alias (set up in the app)
 ]
 
-LOGIN_REDIRECT_URL = '/portal/'
+# LOGIN_REDIRECT_URL = '/portal/'
 
 # Application definition
 
